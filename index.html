@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/sanitize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>KAJI SHARE | トップ</title>
+</head>
+
+<body>
+    <!-- TOPページ -->
+    <header>
+        <div class="header-wrapper">
+            <a href="index.html">
+                <div class="header-logo">
+                    <img src="img/logo.jpg" alt="ヘッダーロゴ">
+                </div>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="text-center pc-attention">
+            <p>このアプリはスマホ画面限定で表示されます。<br>
+                ディベロッパーツールでスマホ画面に切り替えてご利用ください。
+            </p>
+        </div>
+        <div class="intro-wrapper text-center">
+            <div>
+                <p>「KAJI SHARE」は週末の2人の家事分担を<br>
+                    カンタンに決められるアプリです。</p>
+            </div>
+            <a href="index2.html">
+                <div class="intro-btn">家事分担を決める</div>
+            </a>
+            <a href="index3.html">
+                <div class="intro-btn">アプリの使い方</div>
+            </a>
+            <div class="for-ans-btn">
+                <a href="index4.html">
+                    <div class="intro-btn">前回の結果</div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrapper footer text-center">
+            copyrights 2021 Nobumichi Kunitake All RIghts Reserved.
+        </div>
+    </footer>
+
+    <script>
+        const topQ1 = localStorage.getItem("save-manQ1");
+        if (topQ1 > 0) {
+            $(".for-ans-btn").addClass("btn-active");
+        };
+
+    </script>
+</body>
+
+</html>

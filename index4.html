@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/sanitize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>KAJI SHARE | 結果画面</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <a href="index.html">
+                <div class="header-logo">
+                    <img src="img/logo.jpg" alt="ヘッダーロゴ">
+                </div>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="ans-wrapper text-center">
+            <h2 class="ans-kaji">家事分担の結果発表</h2>
+            <div class="ans-title">
+                <div class="box-title">Q1.週末ごはんの料理</div>
+                <div id="ansQ1" class="box-ans">Q1の結果
+                </div>
+            </div>
+            <div class="ans-title">
+                <div class="box-title">Q2.平日ごはんの作り置き</div>
+                <div id="ansQ2" class="box-ans">Q2の結果
+                </div>
+            </div>
+            <div class="ans-title">
+                <div class="box-title">Q3.食器洗い</div>
+                <div id="ansQ3" class="box-ans">Q3の結果
+                </div>
+            </div>
+            <div class="ans-title">
+                <div class="box-title">Q4.洗濯</div>
+                <div id="ansQ4" class="box-ans">Q4の結果
+                </div>
+            </div>
+            <div class="ans-title">
+                <div class="box-title">Q5.掃除</div>
+                <div id="ansQ5" class="box-ans">Q5の結果
+                </div>
+            </div>
+            <div class="memo-title">分担メモ</div>
+            <textarea id="memo-area" class="box-memo"></textarea>
+            <div id="memo-save" class="memo-save-btn">メモを保存する</div>
+            <div id="memo-clear" class="memo-clear-btn">メモを削除する</div>
+
+            <a href="index.html" class="top-btn">
+                <p>TOPに戻る</p>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrapper footer text-center">
+            copyrights 2021 Nobumichi Kunitake All RIghts Reserved.
+        </div>
+    </footer>
+
+    <script>
+        const manQ1 = localStorage.getItem("save-manQ1");
+        const manQ2 = localStorage.getItem("save-manQ2");
+        const manQ3 = localStorage.getItem("save-manQ3");
+        const manQ4 = localStorage.getItem("save-manQ4");
+        const manQ5 = localStorage.getItem("save-manQ5");
+        const womanQ1 = localStorage.getItem("save-womanQ1");
+        const womanQ2 = localStorage.getItem("save-womanQ2");
+        const womanQ3 = localStorage.getItem("save-womanQ3");
+        const womanQ4 = localStorage.getItem("save-womanQ4");
+        const womanQ5 = localStorage.getItem("save-womanQ5");
+        console.log(manQ1);
+        console.log(manQ2);
+        console.log(manQ3);
+        console.log(manQ4);
+        console.log(manQ5);
+        console.log(womanQ1);
+        console.log(womanQ2);
+        console.log(womanQ3);
+        console.log(womanQ4);
+        console.log(womanQ5);
+
+        const ansQ1 = manQ1 + womanQ1;
+        const ansQ2 = manQ2 + womanQ2;
+        const ansQ3 = manQ3 + womanQ3;
+        const ansQ4 = manQ4 + womanQ4;
+        const ansQ5 = manQ5 + womanQ5;
+        console.log(ansQ1);
+        console.log(ansQ2);
+        console.log(ansQ3);
+        console.log(ansQ4);
+        console.log(ansQ5);
+
+        const role1 = ["男性が担当", "女性が担当"];
+        const randomNumber1 = Math.floor(Math.random() * role1.length);
+        const randomRole1 = role1[randomNumber1];
+
+        const role2 = ["男性が担当", "女性が担当"];
+        const randomNumber2 = Math.floor(Math.random() * role2.length);
+        const randomRole2 = role2[randomNumber2];
+
+        const role3 = ["男性が担当", "女性が担当"];
+        const randomNumber3 = Math.floor(Math.random() * role3.length);
+        const randomRole3 = role3[randomNumber3];
+
+        const role4 = ["男性が担当", "女性が担当"];
+        const randomNumber4 = Math.floor(Math.random() * role4.length);
+        const randomRole4 = role4[randomNumber4];
+
+        const role5 = ["男性が担当", "女性が担当"];
+        const randomNumber5 = Math.floor(Math.random() * role5.length);
+        const randomRole5 = role5[randomNumber5];
+
+        if (ansQ1 == 303) {
+            $("#ansQ1").html("2人で一緒にやる");
+        } else if (ansQ1 == 302 || ansQ1 == 302) {
+            $("#ansQ1").html("男性が担当");
+        } else if (ansQ1 == 203 || ansQ1 == 103) {
+            $("#ansQ1").html("女性が担当");
+        } else if (ansQ1 == 202 || ansQ1 == 201 || ansQ1 == 102) {
+            $("#ansQ1").html(randomRole1);
+        } else if (ansQ1 == 101) {
+            $("#ansQ1").html("今週末はやらない");
+        }
+
+        if (ansQ2 == 3003) {
+            $("#ansQ2").html("2人で一緒にやる");
+        } else if (ansQ2 == 3002 || ansQ2 == 3001) {
+            $("#ansQ2").html("男性が担当");
+        } else if (ansQ2 == 2003 || ansQ2 == 1003) {
+            $("#ansQ2").html("女性が担当");
+        } else if (ansQ2 == 2002 || ansQ2 == 2001 || ansQ2 == 1002) {
+            $("#ansQ2").html(randomRole2);
+        } else if (ansQ2 == 1001) {
+            $("#ansQ2").html("今週末はやらない");
+        }
+
+        if (ansQ3 == 300003) {
+            $("#ansQ3").html("2人で一緒にやる");
+        } else if (ansQ3 == 30002 || ansQ3 == 30001) {
+            $("#ansQ3").html("男性が担当");
+        } else if (ansQ3 == 20003 || ansQ3 == 10003) {
+            $("#ansQ3").html("女性が担当");
+        } else if (ansQ3 == 20002 || ansQ3 == 20001 || ansQ3 == 10002) {
+            $("#ansQ3").html(randomRole3);
+        } else if (ansQ3 == 10001) {
+            $("#ansQ3").html("今週末はやらない");
+        }
+
+        if (ansQ4 == 300003) {
+            $("#ansQ4").html("2人で一緒にやる");
+        } else if (ansQ4 == 300002 || ansQ4 == 300001) {
+            $("#ansQ4").html("男性が担当");
+        } else if (ansQ4 == 200003 || ansQ4 == 100003) {
+            $("#ansQ4").html("女性が担当");
+        } else if (ansQ4 == 200002 || ansQ4 == 200001 || ansQ4 == 100002) {
+            $("#ansQ4").html(randomRole4);
+        } else if (ansQ4 == 100001) {
+            $("#ansQ4").html("今週末はやらない");
+        }
+
+
+        if (ansQ5 == 3000003) {
+            $("#ansQ5").html("2人で一緒にやる");
+        } else if (ansQ5 == 3000002 || ansQ5 == 3000001) {
+            $("#ansQ5").html("男性が担当");
+        } else if (ansQ5 == 2000003 || ansQ5 == 1000003) {
+            $("#ansQ5").html("女性が担当");
+        } else if (ansQ5 == 2000002 || ansQ5 == 2000001 || ansQ5 == 1000002) {
+            $("#ansQ5").html(randomRole5);
+        } else if (ansQ5 == 1000001) {
+            $("#ansQ5").html("今週末はやらない");
+        }
+
+        $("#memo-save").click(function () {
+            const memo = $("#memo-area").val();
+            localStorage.setItem("memo-save", memo);
+        });
+
+        $("#memo-clear").click(function () {
+            localStorage.removeItem("memo-save");
+            $("#memo-area").val("");
+        });
+
+        if (localStorage.getItem("memo-save")) {
+            const memo = localStorage.getItem("memo-save");
+            $("#memo-area").val(memo);
+        };
+
+    </script>
+</body>
+
+</html>

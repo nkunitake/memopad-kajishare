@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/sanitize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>KAJI SHARE | 選択画面</title>
+</head>
+
+<body>
+    <!-- 選択ページ -->
+    <header>
+        <header>
+            <div class="header-wrapper">
+                <a href="index.html">
+                    <div class="header-logo">
+                        <img src="img/logo.jpg" alt="ヘッダーロゴ">
+                    </div>
+                </a>
+            </div>
+        </header>
+    </header>
+    <main>
+        <div class="option-wrapper text-center option1 active">
+            <div class="choice-wrapper">
+                <h2 class="man-title">男性</h2>
+                <h3 class="q-title">Q1. 週末ごはんの料理</h3>
+                <div class="btn-wrapper">
+                    <div class="manQ1-btn choice-btn" value=30>やりたい</div>
+                    <div class="manQ1-btn choice-btn" value=20>やってほしい</div>
+                    <div class="manQ1-btn choice-btn" value=10>やらなくていい</div>
+                </div>
+                <div id="manQ1-ans" class="ans-text">Q1の選択結果
+                </div>
+                <div id="save1" class="save-btn">次の家事選択へ</div>
+            </div>
+        </div>
+        <div class="option-wrapper text-center option2">
+            <div class="choice-wrapper">
+                <h2 class="man-title">男性</h2>
+                <h3 class="q-title">Q2. 平日ごはんの作り置き</h3>
+                <div class="btn-wrapper">
+                    <div class="manQ2-btn choice-btn" value=300>やりたい</div>
+                    <div class="manQ2-btn choice-btn" value=200>やってほしい</div>
+                    <div class="manQ2-btn choice-btn" value=100>やらなくていい</div>
+                </div>
+                <div id="manQ2-ans" class="ans-text">Q2の選択結果
+                </div>
+                <div id="save2" class="save-btn">次の家事選択へ</div>
+            </div>
+        </div>
+        <div class="option-wrapper text-center option3">
+            <div class="choice-wrapper">
+                <h2 class="man-title">男性</h2>
+                <h3 class="q-title">Q3. 食器洗い</h3>
+                <div class="btn-wrapper">
+                    <div class="manQ3-btn choice-btn" value=3000>やりたい</div>
+                    <div class="manQ3-btn choice-btn" value=2000>やってほしい</div>
+                    <div class="manQ3-btn choice-btn" value=1000>やらなくていい</div>
+                </div>
+                <div id="manQ3-ans" class="ans-text">Q3の選択結果
+                </div>
+                <div id="save3" class="save-btn">次の家事選択へ</div>
+            </div>
+        </div>
+        <div class="option-wrapper text-center option4">
+            <div class="choice-wrapper">
+                <h2 class="man-title">男性</h2>
+                <h3 class="q-title">Q4. 洗濯</h3>
+                <div class="btn-wrapper">
+                    <div class="manQ4-btn choice-btn" value=30000>やりたい</div>
+                    <div class="manQ4-btn choice-btn" value=20000>やってほしい</div>
+                    <div class="manQ4-btn choice-btn" value=10000>やらなくていい</div>
+                </div>
+                <div id="manQ4-ans" class="ans-text">Q4の選択結果
+                </div>
+                <div id="save4" class="save-btn">次の家事選択へ</div>
+            </div>
+        </div>
+        <div class="option-wrapper text-center option5">
+            <div class="choice-wrapper">
+                <h2 class="man-title">男性</h2>
+                <h3 class="q-title">Q5. 掃除</h3>
+                <div class="btn-wrapper">
+                    <div class="manQ5-btn choice-btn" value=300000>やりたい</div>
+                    <div class="manQ5-btn choice-btn" value=200000>やってほしい</div>
+                    <div class="manQ5-btn choice-btn" value=100000>やらなくていい</div>
+                </div>
+                <div id="manQ5-ans" class="ans-text">Q5の選択結果
+                </div>
+                <div id="save5" class="save-btn">次は女性が選択</div>
+            </div>
+        </div>
+        <div class="option-wrapper text-center option6">
+            <div class="choice-wrapper">
+                <h2 class="woman-title">女性</h2>
+                <h3 class="q-title">Q1. 週末ごはんの料理</h3>
+                <div class="btn-wrapper">
+                    <div class="womanQ1-btn choice-btn-woman" value=3>やりたい</div>
+                    <div class="womanQ1-btn choice-btn-woman" value=2>やってほしい</div>
+                    <div class="womanQ1-btn choice-btn-woman" value=1>やらなくていい</div>
+                </div>
+                <div id="womanQ1-ans" class="ans-text">Q1の選択結果
+                </div>
+                <div id="save6" class="save-btn">次の家事選択へ</div>
+            </div>
+        </div>
+        <div class="option-wrapper text-center option7">
+            <div class="choice-wrapper">
+                <h2 class="woman-title">女性</h2>
+                <h3 class="q-title">Q2. 平日ごはんの作り置き</h3>
+                <div class="btn-wrapper">
+                    <div class="womanQ2-btn choice-btn-woman" value=3>やりたい</div>
+                    <div class="womanQ2-btn choice-btn-woman" value=2>やってほしい</div>
+                    <div class="womanQ2-btn choice-btn-woman" value=1>やらなくていい</div>
+                </div>
+                <div id="womanQ2-ans" class="ans-text">Q2の選択結果
+                </div>
+                <div id="save7" class="save-btn">次の家事選択へ</div>
+            </div>
+        </div>
+        <div class="option-wrapper text-center option8">
+            <div class="choice-wrapper">
+                <h2 class="woman-title">女性</h2>
+                <h3 class="q-title">Q3. 食器洗い</h3>
+                <div class="btn-wrapper">
+                    <div class="womanQ3-btn choice-btn-woman" value=3>やりたい</div>
+                    <div class="womanQ3-btn choice-btn-woman" value=2>やってほしい</div>
+                    <div class="womanQ3-btn choice-btn-woman" value=1>やらなくていい</div>
+                </div>
+                <div id="womanQ3-ans" class="ans-text">Q3の選択結果
+                </div>
+                <div id="save8" class="save-btn">次の家事選択へ</div>
+            </div>
+        </div>
+        <div class="option-wrapper text-center option9">
+            <div class="choice-wrapper">
+                <h2 class="woman-title">女性</h2>
+                <h3 class="q-title">Q4. 洗濯</h3>
+                <div class="btn-wrapper">
+                    <div class="womanQ4-btn choice-btn-woman" value=3>やりたい</div>
+                    <div class="womanQ4-btn choice-btn-woman" value=2>やってほしい</div>
+                    <div class="womanQ4-btn choice-btn-woman" value=1>やらなくていい</div>
+                </div>
+                <div id="womanQ4-ans" class="ans-text">Q4の選択結果
+                </div>
+                <div id="save9" class="save-btn">次の家事選択へ</div>
+            </div>
+        </div>
+        <div class="option-wrapper text-center option10">
+            <div class="choice-wrapper">
+                <h2 class="woman-title">女性</h2>
+                <h3 class="q-title">Q5. 掃除</h3>
+                <div class="btn-wrapper">
+                    <div class="womanQ5-btn choice-btn-woman" value=3>やりたい</div>
+                    <div class="womanQ5-btn choice-btn-woman" value=2>やってほしい</div>
+                    <div class="womanQ5-btn choice-btn-woman" value=1>やらなくていい</div>
+                </div>
+                <div id="womanQ5-ans" class="ans-text">Q5の選択結果
+                </div>
+                <a href="index4.html" class="save-btn">
+                    <div id="save10">家事分担の結果を見る</div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrapper footer text-center">
+            copyrights 2021 Nobumichi Kunitake All RIghts Reserved.
+        </div>
+    </footer>
+    <script>
+        $(".manQ1-btn").click(function () {
+            const manQ1 = $(this).attr("value");
+            if (manQ1 == 30) {
+                $("#manQ1-ans").html("やりたいを選択");
+            } else if (manQ1 == 20) {
+                $("#manQ1-ans").html("やってほしいを選択");
+            } else if (manQ1 == 10) {
+                $("#manQ1-ans").html("やらなくていいを選択");
+            }
+            $("#save1").click(function () {
+                localStorage.setItem("save-manQ1", manQ1);
+                $(".active").removeClass("active");
+                $(".option2").addClass("active");
+
+            });
+        });
+
+        $(".manQ2-btn").click(function () {
+            const manQ2 = $(this).attr("value");
+            if (manQ2 == 300) {
+                $("#manQ2-ans").html("やりたいを選択");
+            } else if (manQ2 == 200) {
+                $("#manQ2-ans").html("やってほしいを選択");
+            } else if (manQ2 == 100) {
+                $("#manQ2-ans").html("やらなくていいを選択");
+            }
+            $("#save2").click(function () {
+                localStorage.setItem("save-manQ2", manQ2);
+                $(".active").removeClass("active");
+                $(".option3").addClass("active");
+            });
+        });
+
+        $(".manQ3-btn").click(function () {
+            const manQ3 = $(this).attr("value");
+            if (manQ3 == 3000) {
+                $("#manQ3-ans").html("やりたいを選択");
+            } else if (manQ3 == 2000) {
+                $("#manQ3-ans").html("やってほしいを選択");
+            } else if (manQ3 == 1000) {
+                $("#manQ3-ans").html("やらなくていいを選択");
+            }
+            $("#save3").click(function () {
+                localStorage.setItem("save-manQ3", manQ3);
+                $(".active").removeClass("active");
+                $(".option4").addClass("active");
+            });
+        });
+
+        $(".manQ4-btn").click(function () {
+            const manQ4 = $(this).attr("value");
+            if (manQ4 == 30000) {
+                $("#manQ4-ans").html("やりたいを選択");
+            } else if (manQ4 == 20000) {
+                $("#manQ3-ans").html("やってほしいを選択");
+            } else if (manQ4 == 10000) {
+                $("#manQ3-ans").html("やらなくていいを選択");
+            }
+            $("#save4").click(function () {
+                localStorage.setItem("save-manQ4", manQ4);
+                $(".active").removeClass("active");
+                $(".option5").addClass("active");
+            });
+        });
+
+        $(".manQ5-btn").click(function () {
+            const manQ5 = $(this).attr("value");
+            if (manQ5 == 300000) {
+                $("#manQ5-ans").html("やりたいを選択");
+            } else if (manQ5 == 200000) {
+                $("#manQ5-ans").html("やってほしいを選択");
+            } else if (manQ5 == 100000) {
+                $("#manQ5-ans").html("やらなくていいを選択");
+            }
+            $("#save5").click(function () {
+                localStorage.setItem("save-manQ5", manQ5);
+                $(".active").removeClass("active");
+                $(".option6").addClass("active");
+            });
+        });
+
+        $(".womanQ1-btn").click(function () {
+            const womanQ1 = $(this).attr("value");
+            if (womanQ1 == 3) {
+                $("#womanQ1-ans").html("やりたいを選択");
+            } else if (womanQ1 == 2) {
+                $("#womanQ1-ans").html("やってほしいを選択");
+            } else if (womanQ1 == 1) {
+                $("#womanQ1-ans").html("やらなくていいを選択");
+            }
+            $("#save6").click(function () {
+                localStorage.setItem("save-womanQ1", womanQ1);
+                $(".active").removeClass("active");
+                $(".option7").addClass("active");
+            });
+        });
+
+        $(".womanQ2-btn").click(function () {
+            const womanQ2 = $(this).attr("value");
+            if (womanQ2 == 3) {
+                $("#womanQ2-ans").html("やりたいを選択");
+            } else if (womanQ2 == 2) {
+                $("#womanQ2-ans").html("やってほしいを選択");
+            } else if (womanQ2 == 1) {
+                $("#womanQ2-ans").html("やらなくていいを選択");
+            }
+            $("#save7").click(function () {
+                localStorage.setItem("save-womanQ2", womanQ2);
+                $(".active").removeClass("active");
+                $(".option8").addClass("active");
+            });
+        });
+
+        $(".womanQ3-btn").click(function () {
+            const womanQ3 = $(this).attr("value");
+            if (womanQ3 == 3) {
+                $("#womanQ3-ans").html("やりたいを選択");
+            } else if (womanQ3 == 2) {
+                $("#womanQ3-ans").html("やってほしいを選択");
+            } else if (womanQ3 == 1) {
+                $("#womanQ3-ans").html("やらなくていいを選択");
+            }
+            $("#save8").click(function () {
+                localStorage.setItem("save-womanQ3", womanQ3);
+                $(".active").removeClass("active");
+                $(".option9").addClass("active");
+            });
+        });
+
+        $(".womanQ4-btn").click(function () {
+            const womanQ4 = $(this).attr("value");
+            if (womanQ4 == 3) {
+                $("#womanQ4-ans").html("やりたいを選択");
+            } else if (womanQ4 == 2) {
+                $("#womanQ4-ans").html("やってほしいを選択");
+            } else if (womanQ4 == 1) {
+                $("#womanQ4-ans").html("やらなくていいを選択");
+            }
+            $("#save9").click(function () {
+                localStorage.setItem("save-womanQ4", womanQ4);
+                $(".active").removeClass("active");
+                $(".option10").addClass("active");
+            });
+        });
+
+        $(".womanQ5-btn").click(function () {
+            const womanQ5 = $(this).attr("value");
+            if (womanQ5 == 3) {
+                $("#womanQ5-ans").html("やりたいを選択");
+            } else if (womanQ5 == 2) {
+                $("#womanQ5-ans").html("やってほしいを選択");
+            } else if (womanQ5 == 1) {
+                $("#womanQ5-ans").html("やらなくていいを選択");
+            }
+            $("#save10").click(function () {
+                localStorage.setItem("save-womanQ5", womanQ5);
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

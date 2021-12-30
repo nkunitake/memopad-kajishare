@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/sanitize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>KAJI SHARE | アプリの使い方</title>
+</head>
+
+<body>
+    <header>
+        <header>
+            <div class="header-wrapper">
+                <a href="index.html">
+                    <div class="header-logo">
+                        <img src="img/logo.jpg" alt="ヘッダーロゴ">
+                    </div>
+                </a>
+            </div>
+        </header>
+    </header>
+    <main>
+        <div class="about-wrapper text-center slide-option1 slide-active">
+            <div class="slide-wrapper">
+                <h2 class="slide-title">KAJI SHAREとは</h2>
+                <div class="slide">
+                    <img src="img/slide1.jpg" alt="スライド1">
+                </div>
+                <div class="slide-text">
+                    <p>KAJI SHAREは、男性と女性それぞれの<br>
+                        やりたい家事を選ぶだけで、週末の<br>
+                        家事分担ができるアプリです。</p>
+                </div>
+                <div class="next-btn" id="slide1">次へ</div>
+            </div>
+        </div>
+        <div class="about-wrapper text-center slide-option2">
+            <div class="slide-wrapper">
+                <h2 class="slide-title">2人ともやりたい家事は</h2>
+                <div class="slide">
+                    <img src="img/slide2.jpg" alt="スライド2">
+                </div>
+                <div class="slide-text">
+                    <p>2人とも「やりたい」を選んだら、<br>
+                        <span>「2人で一緒にやる」</span>が結果に<br>
+                        表示されます。
+                    </p>
+                </div>
+                <div class="next-btn" id="slide2">次へ</div>
+            </div>
+        </div>
+        <div class="about-wrapper text-center slide-option3">
+            <div class="slide-wrapper">
+                <h2 class="slide-title">自分はやりたくない家事は</h2>
+                <div class="slide">
+                    <img src="img/slide3.jpg" alt="スライド3">
+                </div>
+                <div class="slide-text">
+                    <p>お互いやりたくない。でもやったほうが<br>
+                        いい家事は、
+                        <span>ランダムでどちらがやるか</span><br>
+                        を決めます。
+                    </p>
+                </div>
+                <div class="next-btn" id="slide3">次へ</div>
+            </div>
+        </div>
+        <div class="about-wrapper text-center slide-option4">
+            <div class="slide-wrapper">
+                <h2 class="slide-title">お互いやらなくていい家事は</h2>
+                <div class="slide">
+                    <img src="img/slide4.jpg" alt="スライド3">
+                </div>
+                <div class="slide-text">
+                    <p>今週末はお休みにしましょう。<br>
+                        <span>「やらなくていい」</span>家事にします。<br>
+                    </p>
+                </div>
+                <a href="index2.html" class="next-btn">
+                    <div>家事分担を始める</div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrapper footer text-center">
+            copyrights 2021 Nobumichi Kunitake All RIghts Reserved.
+        </div>
+    </footer>
+    <script>
+        $("#slide1").click(function () {
+            $(".slide-active").removeClass("slide-active");
+            $(".slide-option2").addClass("slide-active");
+        });
+
+        $("#slide2").click(function () {
+            $(".slide-active").removeClass("slide-active");
+            $(".slide-option3").addClass("slide-active");
+        });
+
+        $("#slide3").click(function () {
+            $(".slide-active").removeClass("slide-active");
+            $(".slide-option4").addClass("slide-active");
+        });
+    </script>
+</body>
+
+</html>
